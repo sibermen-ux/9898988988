@@ -112,13 +112,12 @@
     100% { transform: translateY(-900px) rotate(45deg); opacity: 0; }
   }
 
-  #romantic-gif {
-    width: 200px;
-    height: auto;
+  #final-message {
+    display: none;
+    font-size: 2rem;
+    color: #fff;
     margin-top: 30px;
-    border-radius: 50%;
-    box-shadow: 0 0 40px rgba(255, 77, 109, 0.8);
-    border: 4px solid #fff;
+    text-shadow: 0 0 20px #ff4d6d;
   }
 
   @media (max-width: 600px) {
@@ -140,10 +139,7 @@
 <div id="romantic-scene">
   <h1>Sonsuz Aşkımıza ❤️</h1>
   <p>Gözlerin parlayan bir yıldız gibi...<br>Kalbim, seninle tamamlanan bir şiir.<br>Hayatımda olduğun için şükrediyorum...</p>
-  <h2 id="final-message" style="display:none; font-size: 2rem; color: #fff; margin-top: 30px; text-shadow: 0 0 20px #ff4d6d;">
-    💖 Artık Kalbimin Sahibisin 💖
-  </h2>
-  <img id="romantic-gif" style="display: none;" src="https://media.giphy.com/media/I9nQ0pF5p5D1W/giphy.gif" alt="Kalp Gif">
+  <h2 id="final-message">💖 Artık Kalbimin Sahibisin 💖</h2>
   <canvas id="confetti-canvas" style="position:absolute; top:0; left:0; width:100%; height:100%; pointer-events:none;"></canvas>
 </div>
 
@@ -181,7 +177,6 @@
   function showFinalMessage() {
     setTimeout(() => {
       document.getElementById("final-message").style.display = "block";
-      document.getElementById("romantic-gif").style.display = "block";
     }, 2000);
   }
 
